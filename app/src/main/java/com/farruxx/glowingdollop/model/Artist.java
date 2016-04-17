@@ -42,7 +42,7 @@ public class Artist implements Serializable{
         return result.toString();
     }
 
-    public class Cover {
+    public class Cover implements Serializable{
         public String small;
         public String big;
     }

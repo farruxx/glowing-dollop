@@ -54,6 +54,7 @@ public class DetailFragment extends BaseFragment {
 
         genres.setText(artist.getGenres().replace(",", " •"));
         biography.setText(artist.description);
+        songs.setText(getString(R.string.albums_and_songs,artist.albums, artist.tracks));
         Picasso.with(getActivity())
                 .load(artist.cover.small)
                 .placeholder(R.drawable.holder)

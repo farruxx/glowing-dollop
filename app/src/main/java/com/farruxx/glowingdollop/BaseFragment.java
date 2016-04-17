@@ -75,7 +75,7 @@ public abstract class BaseFragment extends Fragment {
 
     public void hideLoading(){
         if(getActivity() != null && toolbar != null){
-            ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(getString(R.string.app_name));
+            ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(getString(R.string.artists));
         }
     }
 
