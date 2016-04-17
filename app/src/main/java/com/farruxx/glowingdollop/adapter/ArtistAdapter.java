@@ -1,13 +1,15 @@
 package com.farruxx.glowingdollop.adapter;
 
+import android.os.Build;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
-import com.bumptech.glide.Glide;
 import com.farruxx.glowingdollop.BaseFragment;
 import com.farruxx.glowingdollop.R;
 import com.farruxx.glowingdollop.model.Artist;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -38,7 +40,18 @@ public class ArtistAdapter extends RecyclerView.Adapter<ArtistHolder>{
         holder.genres.setText(artist.getGenres());
         holder.songs.setText(fragment.getString(R.string.albums_and_songs,artist.albums, artist.tracks));
         if(artist.cover != null && artist.cover.small != null) {
-            Glide.with(fragment).load(artist.cover.small).into(holder.cover);
+            Picasso.with(fragment.getActivity())
+                    .load(artist.cover.small)
+                    .error(R.drawable.holder)
+                    .placeholder(R.drawable.holder)
+                    .into(holder.cover);
+        }
+        holder.itemView.setTag(artist);
+        holder.itemView.setOnClickListener((View.OnClickListener) fragment);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            holder.genres.setTransitionName("transtext" + position);
+            holder.cover.setTransitionName("transition" + position);
+            holder.songs.setTransitionName("songs" + position);
         }
     }
 

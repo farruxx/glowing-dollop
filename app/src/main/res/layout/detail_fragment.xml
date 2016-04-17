@@ -1,11 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:id="@+id/imageView"
-        android:src="@drawable/sample"
-        android:transitionName="@string/app_name" />
-</LinearLayout>
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:id="@+id/cover"
+            android:src="@drawable/sample"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dance"
+                android:id="@+id/genres"
+                android:layout_below="@+id/name"
+                android:textColor="@color/grayText"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="8 альбомов"
+                android:id="@+id/songs"
+                android:layout_alignParentBottom="true"
+                android:maxLines="1"
+                android:textColor="@color/grayText"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/biography"
+                android:id="@+id/textView"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="10dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia, tortor sit amet venenatis lobortis, sapien sapien hendrerit massa, interdum suscipit augue massa in quam. Vivamus urna orci, maximus ut mattis in, tempus vitae lectus. Aliquam placerat, eros at ultricies mollis, libero nisi feugiat diam, ut lacinia arcu nunc non ipsum. Integer non neque vel tellus fermentum pretium. Vivamus venenatis pretium nibh a faucibus. Cras nulla magna, tempor a mi a, auctor scelerisque odio. Proin efficitur bibendum urna vel dignissim. Aliquam in semper elit. Sed eu consequat dolor, sit amet imperdiet mauris. Mauris pretium, nunc ac ornare pharetra, elit nulla mollis est, eu sagittis urna turpis sit amet metus. In semper elit mauris, lobortis maximus risus cursus scelerisque."
+                android:id="@+id/biography"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -2,6 +2,7 @@ package com.farruxx.glowingdollop;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
 import com.farruxx.glowingdollop.fragment.MainFragment;
 
 public class MainActivity extends AppCompatActivity{

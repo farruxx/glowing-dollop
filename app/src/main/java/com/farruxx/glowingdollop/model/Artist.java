@@ -35,7 +35,7 @@ public class Artist implements Serializable{
             while (iterator.hasNext()) {
                 result.append(iterator.next());
                 if (iterator.hasNext()) {
-                    result.append(",");
+                    result.append(", ");
                 }
             }
         }
